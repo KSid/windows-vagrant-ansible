@@ -5,6 +5,8 @@ Windows is not currently supported by [Ansible][1] which means the standard Ansi
 [Vagrant][2] cannot be used with this platform. The provision.sh script takes advantage of Vagrant's
 [shell provisioning][3] facilities to allow the use of Ansible from within a VM regardless of the host platform.
 
+N.B. The script has only been tested on Debian Wheezy and will not work on an OS without the apt package manager.
+
 Usage
 -----
 
