@@ -2,8 +2,8 @@ windows-vagrant-ansible
 =======================
 
 Windows is not currently supported by [Ansible][1] which means the standard Ansible plugin provided with
-[Vagrant][2] cannot be used with this platform. The provision.sh script allows the use of Ansible from within
-a VM via the [shell provisioning][3] facilities provided by Vagrant.
+[Vagrant][2] cannot be used with this platform. The provision.sh script takes advantage of Vagrant's
+[shell provisioning][3] facilities to allow the use of Ansible from within a VM regardless of the host platform.
 
 Usage
 -----
