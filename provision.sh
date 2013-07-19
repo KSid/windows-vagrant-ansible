@@ -1,12 +1,12 @@
 #!/bin/bash
 
 ANSIBLE_DIR=$1
-ANSIBLE_PLAY=$2
+ANSIBLE_PLAYBOOK=$2
 ANSIBLE_HOSTS=$3
 TEMP_HOSTS="/tmp/ansible_hosts"
 
-if [ ! -f /vagrant/$ANSIBLE_PLAY ]; then
-	echo "Cannot find Ansible play"
+if [ ! -f /vagrant/$ANSIBLE_PLAYBOOK ]; then
+	echo "Cannot find Ansible playbook"
 	exit 1
 fi
 
@@ -27,5 +27,5 @@ fi
 cd ${ANSIBLE_DIR}
 cp /vagrant/${ANSIBLE_HOSTS} ${TEMP_HOSTS} && chmod -x ${TEMP_HOSTS}
 echo "Running Ansible"
-bash -c "source hacking/env-setup && ansible-playbook /vagrant/${ANSIBLE_PLAY} --inventory-file=${TEMP_HOSTS} --connection=local"
+bash -c "source hacking/env-setup && ansible-playbook /vagrant/${ANSIBLE_PLAYBOOK} --inventory-file=${TEMP_HOSTS} --connection=local"
 rm ${TEMP_HOSTS}
