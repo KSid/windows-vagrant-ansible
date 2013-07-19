@@ -9,7 +9,7 @@ Usage
 -----
 
 Place provision.sh in the same directory as your Vagrantfile. You should then configure Vagrant to use
-shell provisioning where sh.path refers to provision.sh script. Three options are required and must be
+shell provisioning where sh.path refers to provision.sh. Three options are required and must be
 supplied using sh.args in the following order:
 
 1. The directory the Ansible git repository should be cloned into
